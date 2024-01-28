@@ -1,1 +1,3 @@
-__import__("1-calculation")
+import sys
+
+print(len(sys.argv))
