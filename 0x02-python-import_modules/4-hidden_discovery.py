@@ -1,4 +1,4 @@
-#!/usr/bin/python38
+#!/usr/bin/python3
 
 import hidden_4
 
