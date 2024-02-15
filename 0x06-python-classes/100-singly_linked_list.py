@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""This module contains the implementation of the Node class
+    and the SinglyLinkedList class"""
+
 
 class Node:
+    """the Node class contains a variable to store the data
+        a pointer to the next node"""
+
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
@@ -21,6 +27,9 @@ class Node:
 
 
 class SinglyLinkedList:
+    """This class represents the singly linked list data structure
+        using Node class as the nodes"""
+
     def __init__(self):
         self.__head = None
 
