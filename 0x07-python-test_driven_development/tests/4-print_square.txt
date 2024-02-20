@@ -1,0 +1,29 @@
+>>> sq = __import__("4-print_square").print_square
+
+>>> sq(1)
+#
+
+>>> sq(3)
+###
+###
+###
+
+>>> sq('a')
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> sq()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+>>> sq(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> sq(2.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
