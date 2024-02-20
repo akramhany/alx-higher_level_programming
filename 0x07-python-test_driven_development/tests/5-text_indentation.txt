@@ -1,0 +1,25 @@
+>>> indent = __import__("5-text_indentation").text_indentation
+
+>>> indent("akram.ahmed")
+akram.
+<BLANKLINE>
+ahmed
+
+>>> indent("he said: hello, how are you doing? knowing he won't get an answer.")
+he said:
+<BLANKLINE>
+hello, how are you doing?
+<BLANKLINE>
+knowing he won't get an answer.
+<BLANKLINE>
+
+>>> indent(1)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> indent()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
