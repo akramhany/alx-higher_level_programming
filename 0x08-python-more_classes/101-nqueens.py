@@ -21,12 +21,13 @@ if N < 4:
     print("N must be at least 4")
     exit(1)
 
+
 def verify_solution(sol, N):
     """ Takes a list of indecies, and verify it """
 
     if len(sol) != N:
         return False
-    
+
     for i in range(len(sol)):
         row_1 = sol[i][0]
         col_1 = sol[i][1]
