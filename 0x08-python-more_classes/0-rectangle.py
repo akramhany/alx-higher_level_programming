@@ -4,4 +4,7 @@
 
 
 class Rectangel:
+    """
+    Rectangle class
+    """
     pass
