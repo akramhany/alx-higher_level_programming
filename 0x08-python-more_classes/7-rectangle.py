@@ -67,9 +67,14 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return result
 
+        symbol = str(type(self).print_symbol)
+
+        if hasattr(self, 'print_symbol'):
+            symbol = str(self.print_symbol)
+
         for i in range(self.height):
             for j in range(self.width):
-                result += str(type(self).print_symbol)
+                result += symbol
 
             if i != self.height - 1:
                 result += "\n"
