@@ -3,7 +3,7 @@
 """ A module that contain the rectangle class (ALX task 0) """
 
 
-class Rectangel:
+class Rectangle:
     """
     Rectangle class
     """
