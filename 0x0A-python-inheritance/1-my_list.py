@@ -8,5 +8,6 @@ class MyList(list):
     """ a simple class that inherits from list class """
 
     def print_sorted(self):
-        self.sort()
-        print(self)
+        sortedL = self[:]
+        sortedL.sort()
+        print(sortedL)
