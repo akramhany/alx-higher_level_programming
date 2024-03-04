@@ -10,3 +10,7 @@ my_list.append(5)
 print(my_list)
 my_list.print_sorted()
 print(my_list)
+
+test = MyList()
+print(test.print_sorted())
+print(test)

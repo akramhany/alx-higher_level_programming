@@ -25,3 +25,12 @@
 
 >>> newL.print_sorted()
 [1, 1, 1]
+
+>>> test = MyList()
+
+>>> print(test.print_sorted())
+[]
+None
+
+>>> print(test)
+[]
