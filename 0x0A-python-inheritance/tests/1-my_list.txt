@@ -4,10 +4,12 @@
 
 >>> ls.print_sorted()
 []
+[]
 
 >>> ls.append(1)
 
 >>> ls.print_sorted()
+[1]
 [1]
 
 >>> ls.append(5)
@@ -15,6 +17,7 @@
 >>> ls.append(-4)
 
 >>> ls.print_sorted()
+[-4, 1, 2, 5]
 [-4, 1, 2, 5]
 
 >>> newL = MyList()
@@ -25,12 +28,16 @@
 
 >>> newL.print_sorted()
 [1, 1, 1]
+[1, 1, 1]
 
 >>> test = MyList()
 
+>>> test.append(5)
+>>> test.append(3)
+
 >>> print(test.print_sorted())
-[]
-None
+[3, 5]
+[3, 5]
 
 >>> print(test)
-[]
+[5, 3]

@@ -11,3 +11,4 @@ class MyList(list):
         sortedL = self[:]
         sortedL.sort()
         print(sortedL)
+        return sortedL
