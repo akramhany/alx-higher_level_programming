@@ -1,9 +1,16 @@
 #!/usr/bin/python3
-# Pascal Triangal problem solution
+"""
+Pascal Triangal problem solution
+"""
+
 
 def pascal_triangle(n):
+    """
+    A function that takes an integer n, and computes pascal triangal
+    """
+
     result = []
- 
+
     for i in range(n):
         arr = []
         if i == 0:
