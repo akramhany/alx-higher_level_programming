@@ -69,6 +69,10 @@ class Square(Rectangle):
             self.y = args[3]
 
     def to_dictionary(self):
+        """
+        Return the dictionary representation of the square.
+        """
+
         return self.__dict__()
 
     def __dict__(self):
