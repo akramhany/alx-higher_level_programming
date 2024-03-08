@@ -68,6 +68,9 @@ class Square(Rectangle):
         if len(args) > 3:
             self.y = args[3]
 
+    def to_dictionary(self):
+        return self.__dict__()
+
     def __dict__(self):
         dt = {}
         dt["id"] = self.id
