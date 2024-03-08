@@ -77,10 +77,15 @@ class Rectangle(Base):
 
     def display(self):
         """
-        Represents and display the rectangle as #
+        Represents and display the rectangle as #, while taking care x and y
         """
 
+        for i in range(self.y):
+            print()
+
         for i in range(self.height):
+            for j in range(self.x):
+                print(" ", end="")
             for j in range(self.width):
                 print("#", end='')
             print()
