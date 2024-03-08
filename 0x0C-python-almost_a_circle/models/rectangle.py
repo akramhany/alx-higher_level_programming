@@ -104,21 +104,16 @@ class Rectangle(Base):
         Takes a name of an attribute and set it with a value.
         """
 
-        match name:
-            case "id":
-                self.id = value
-
-            case "width":
-                self.width = value
-
-            case "height":
-                self.height = value
-
-            case "x":
-                self.x = value
-
-            case "y":
-                self.y = value
+        if name == "id":
+            self.id = value
+        elif name == "width":
+            self.width = value
+        elif name == "height":
+            self.height = value
+        elif name == "x":
+            self.x = value
+        elif name == "y":
+            self.y = value
 
     def update(self, *args, **kwargs):
         """
