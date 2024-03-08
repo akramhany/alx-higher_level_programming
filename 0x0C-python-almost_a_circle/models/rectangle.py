@@ -157,3 +157,7 @@ class Rectangle(Base):
         dt["x"] = self.x
         dt["y"] = self.y
         return dt
+
+    @classmethod
+    def get_type(cls):
+        return "Rectangle"

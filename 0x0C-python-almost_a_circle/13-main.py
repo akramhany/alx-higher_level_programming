@@ -11,7 +11,7 @@ if __name__ == "__main__":
     print(type(s1_dictionary))
 
     s2 = Square(1, 1)
-    print(s2)
+    print(isinstance(s2, Square))
     s2.update(**s1_dictionary)
     print(s2)
     print(s1 == s2)

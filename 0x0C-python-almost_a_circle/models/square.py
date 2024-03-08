@@ -82,3 +82,7 @@ class Square(Rectangle):
         dt["size"] = self.width
         dt["y"] = self.y
         return dt
+
+    @classmethod
+    def get_type(cls):
+        return "Square"
