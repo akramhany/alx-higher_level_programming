@@ -99,18 +99,49 @@ class Rectangle(Base):
                                                        self.y, self.width,
                                                        self.height)
 
-    def update(self, *args):
+    def __update_val(self, name, value):
+        """
+        Takes a name of an attribute and set it with a value.
+        """
+
+        match name:
+            case "id":
+                self.id = value
+
+            case "width":
+                self.width = value
+
+            case "height":
+                self.height = value
+
+            case "x":
+                self.x = value
+
+            case "y":
+                self.y = value
+
+    def update(self, *args, **kwargs):
         """
         Updage the rectangle data with given arguments.
         """
 
+        if len(args) == 0:
+            if kwargs is not None:
+                for key, value in kwargs.items():
+                    self.__update_val(key, value)
+                return
+
         if len(args) > 0:
             self.id = args[0]
+
         if len(args) > 1:
             self.width = args[1]
+
         if len(args) > 2:
             self.height = args[2]
+
         if len(args) > 3:
             self.x = args[3]
+
         if len(args) > 4:
             self.y = args[4]
