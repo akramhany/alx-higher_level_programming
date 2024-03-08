@@ -140,3 +140,10 @@ class Rectangle(Base):
 
         if len(args) > 4:
             self.y = args[4]
+
+    def to_dictionary(self):
+        """
+        returns the dictionary representation of a Rectangle
+        """
+
+        return self.__dict__
