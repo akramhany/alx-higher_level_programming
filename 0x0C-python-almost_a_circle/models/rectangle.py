@@ -146,4 +146,14 @@ class Rectangle(Base):
         returns the dictionary representation of a Rectangle
         """
 
-        return self.__dict__
+        return self.__dict__()
+
+    def __dict__(self):
+
+        dt = {}
+        dt["id"] = self.id
+        dt["width"] = self.width
+        dt["height"] = self.height
+        dt["x"] = self.x
+        dt["y"] = self.y
+        return dt
