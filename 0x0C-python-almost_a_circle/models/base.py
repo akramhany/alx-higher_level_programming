@@ -4,6 +4,7 @@ The base module in the package.
 """
 
 import json
+import os
 
 
 class Base:
@@ -78,6 +79,26 @@ class Base:
 
         with open(filename, 'w', encoding="utf-8") as f:
             f.write(json_rep)
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        loads a list of instances from a file.
+        """
+
+        filename = cls.get_type() + ".json"
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, 'r', encoding="utf-8") as f:
+            json_rep = f.read()
+            obj_list = cls.from_json_string(json_rep)
+
+        inst_list = []
+        for obj in obj_list:
+            inst_list.append(cls.create(**obj))
+
+        return inst_list
 
     @classmethod
     def get_type(cls):
