@@ -6,7 +6,6 @@ The base module in the package.
 import json
 
 
-
 class Base:
     """
     The base class of all other classes in the project, its goal
