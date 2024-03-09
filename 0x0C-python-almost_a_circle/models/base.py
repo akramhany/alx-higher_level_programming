@@ -6,6 +6,7 @@ The base module in the package.
 import json
 
 
+
 class Base:
     """
     The base class of all other classes in the project, its goal
@@ -31,6 +32,33 @@ class Base:
             return "[]"
 
         return json.dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns a list from the json string.
+        """
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        returns an instance with all attributes already set.
+        """
+
+        from models import rectangle
+        from models import square
+
+        if cls.get_type() == "Rectangle":
+            dummy = rectangle.Rectangle(10, 1)
+        else:
+            dummy = square.Square(10)
+
+        dummy.update(**dictionary)
+        return dummy
 
     @classmethod
     def save_to_file(cls, list_objs):
