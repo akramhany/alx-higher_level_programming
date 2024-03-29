@@ -6,5 +6,5 @@ if [$# -ne 1]; then
 fi
 
 git add .
-git commit -m "feat_Task$1 implementation"
+git commit -m "feat: Task $1"
 git push
