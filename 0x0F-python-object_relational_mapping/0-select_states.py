@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""A simple script that connects to database and executes a query"""
+
 import MySQLdb
 from sys import argv
 
