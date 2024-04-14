@@ -28,4 +28,7 @@ if __name__ == '__main__':
         .first()
     )
 
-    print(result.id)
+    if result is not None:
+        print(result.id)
+    else:
+        print('Not found')
