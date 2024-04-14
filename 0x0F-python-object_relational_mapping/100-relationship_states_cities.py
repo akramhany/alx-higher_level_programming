@@ -15,7 +15,8 @@ if __name__ == '__main__':
     db_name = argv[3]
 
     engine = create_engine(
-        'mysql://{}:{}@localhost:3306/{}'.format(username, password, db_name)
+        'mysql://{}:{}@localhost:3306/{}'.format(username, password, db_name),
+        pool_pre_ping=True,
     )
 
     Base.metadata.create_all(engine)
@@ -29,6 +30,6 @@ if __name__ == '__main__':
 
     s.cities.append(c)
 
-    session.add(c)
     session.add(s)
+    session.add(c)
     session.commit()
