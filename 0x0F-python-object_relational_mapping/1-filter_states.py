@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     cur.execute(
-        'SELECT * FROM states WHERE states.name LIKE "N%" ORDER BY states.id'
+        'SELECT * FROM states WHERE states.name LIKE BINARY "N%" ESCAPE "/" ORDER BY states.id'
     )
     results = cur.fetchall()
     for result in results:
