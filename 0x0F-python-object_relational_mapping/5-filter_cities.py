@@ -18,13 +18,17 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     cur.execute(
-        'SELECT cities.id, cities.name, states.name FROM cities INNER JOIN \
+        'SELECT cities.name FROM cities INNER JOIN \
         states ON cities.state_id = states.id WHERE BINARY states.name = %s \
         ORDER BY cities.id;',
         (state_name,),
     )
     results = cur.fetchall()
+    endT = ''
     for result in results:
-        print(result)
+        print(endT, end='')
+        print(result[0], end='')
+        endT = ', '
+    print()
 
     db.close()
