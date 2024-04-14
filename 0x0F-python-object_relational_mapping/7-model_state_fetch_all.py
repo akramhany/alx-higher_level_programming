@@ -8,17 +8,18 @@ from sqlalchemy.orm import sessionmaker
 from sys import argv
 
 
-username = argv[1]
-password = argv[2]
-db_name = argv[3]
-engine = create_engine(
-    'mysql://{}:{}@localhost:3306/{}'.format(username, password, db_name)
-)
-Session = sessionmaker(bind=engine)
+if __name__ == '__main__':
+    username = argv[1]
+    password = argv[2]
+    db_name = argv[3]
+    engine = create_engine(
+        'mysql://{}:{}@localhost:3306/{}'.format(username, password, db_name)
+    )
+    Session = sessionmaker(bind=engine)
 
-session = Session()
+    session = Session()
 
-results = session.query(State).order_by(State.id).all()
+    results = session.query(State).order_by(State.id).all()
 
-for result in results:
-    print(str(result.id) + ': ' + result.name)
+    for result in results:
+        print(str(result.id) + ': ' + result.name)
