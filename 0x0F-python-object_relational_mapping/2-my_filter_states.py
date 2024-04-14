@@ -16,8 +16,8 @@ if __name__ == '__main__':
         host='localhost', port=3306, user=username, passwd=password, db=db_name
     )
 
-    query = 'SELECT * FROM states WHERE states.name = "{}" \
-    ORDER BY states.id'.format(
+    query = "SELECT * FROM states WHERE BINARY states.name = '{}' \
+    ORDER BY states.id".format(
         state_name
     )
     cur = db.cursor()
