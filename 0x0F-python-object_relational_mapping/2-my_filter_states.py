@@ -16,13 +16,12 @@ if __name__ == '__main__':
         host='localhost', port=3306, user=username, passwd=password, db=db_name
     )
 
-    cur = db.cursor()
-    cur.execute(
-        'SELECT * FROM states WHERE states.name = "{}" \
+    query = 'SELECT * FROM states WHERE states.name = "{}" \
     ORDER BY states.id'.format(
-            state_name
-        ),
+        state_name
     )
+    cur = db.cursor()
+    cur.execute(query)
     results = cur.fetchall()
     for result in results:
         print(result)
